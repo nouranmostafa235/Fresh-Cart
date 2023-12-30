@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.title{
+    color: #404553;
+}
+.large-margin{
+    margin-top: 80px;
+}
+.borderhover{
+    transition: all;
+  }
+  .borderhover:hover{
+    border: solid silver 2px;
+    transform: scale3d();
+  }
+  .categ{
+    color: var(--main-color);
+    margin-top: 5px;
+}
+.max-lines {
+    display: block;/* or inline-block */
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-height: 1.8em;
+    line-height: 1.8em;
+  }
+  .rate{
+    background-color: var(--main-color);
+    width: 50px;
+    padding: 0 3px;
+    border-radius: 40px;
+}

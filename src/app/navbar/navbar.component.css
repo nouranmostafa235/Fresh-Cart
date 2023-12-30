@@ -1,0 +1,22 @@
+
+.user-name::after{
+content: "|";
+color: silver;
+padding-left: 10px;
+}
+.searchWidth{
+    width: 500px;
+}
+.searchWidth button{
+    background-color: var(--main-color);
+}
+
+.cart-icon{
+    position: relative;
+}
+.cart-count{
+    position: absolute;
+    top: 0;
+    right: 5px;
+    background-color: aquamarine;
+}

@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+    --main-color:#0aad0a;
+}
+.bg-main{
+    background-color: var(--main-color) !important;
+}
+.color-main{
+    color: var(--main-color);
+}
+.mouse-pointer{
+    cursor: pointer;
+}
+.ngx-pagination .current {
+    background-color: var(--main-color) !important;
+    border-radius: 4px;
+  }
+  .ngx-pagination a{
+    text-decoration: none !important;
+    border: 1px solid slategray;
+    margin: 4px;
+    border-radius: 4px !important;
+  }
+  .form-control:focus{
+    border-color: rgb(10, 173, 10) !important;
+    box-shadow: 0 0 0 0.25rem rgba(10,173,10,.25);
+  }
+ 

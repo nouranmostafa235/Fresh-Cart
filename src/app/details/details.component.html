@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="row align-items-center">
+        <div class="col-md-4">
+            <owl-carousel-o [options]="customOptions">
+
+                <ng-container *ngFor="let image of productDetails.images">
+                  <ng-template carouselSlide >
+                    <img [src]="image" class="img-thumbnail">
+                  </ng-template>
+                </ng-container>
+            
+              </owl-carousel-o>
+        </div>
+        <div class="col-md-8 ps-4">
+           <div class="border-bottom mb-3">
+            <h3 class="mb-4">{{productDetails?.title}}</h3>
+            <h5 class="fs-6 mb-4">Brand: {{productDetails?.brand.name}} | <a class="text-decoration-none">Similar Products of {{productDetails?.brand.name}}</a></h5>
+            <p class="lead fs-6 mb-3">+ delivery from EGP 20.00 (free delivery if order above EGP 200.00)</p>
+           </div>
+<div class="d-flex align-items-center mb-3">
+    <h3 class="fw-bold me-2">
+        EGP {{productDetails?.price}} 
+       </h3>
+       <h5 class="text-decoration-line-through lead fs-5">EGP {{productDetails?.price+25}}</h5>
+</div>
+
+           <div class="d-flex align-items-center mt-3">
+            <div class="rate d-flex justify-content-center align-items-center">
+                <p class="text-white">{{productDetails?.ratingsAverage}}</p>
+                <i class="fa-solid fa-star fa-xs" style="color: #ffffff; "></i>
+            </div>
+            <div class="lead fs-6 ms-1 pb-1 bg-transparent">
+                <p>({{productDetails?.ratingsQuantity}} verified ratings)</p>
+            </div>
+            <div class="wish ms-auto">
+                <button class="btn bg-transparent "><i class="fa-solid fa-heart fa-xl mouse-pointer" style="color: #e83b3b;"></i></button>
+            </div>
+        </div>
+        <button class="btn w-100 addBtn"><i class="fa-solid fa-cart-plus" style="color: #ffffff;"></i>
+            Add to Cart</button>
+    </div>
+    </div>
+</div>

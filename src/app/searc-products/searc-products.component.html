@@ -1,0 +1,44 @@
+<section id="sec1">
+    <div class="container-fluid mx-auto mb-5">
+
+        <div class="row large-margin px-3">
+            <h3 class="title mb-3 px-3">Resultss</h3>
+            
+            <div class="col-md-3 px-3 rounded pb-4 borderhover mb-5" *ngFor="let x of products | searchBar:search | paginate:{
+                itemsPerPage:size,
+                currentPage:page,
+                totalItems:count
+            }; let i = index  ">
+    <a [routerLink]="['/details',x?.id]" class="text-decoration-none text-black">
+        <div class="rounded">
+            <img [src]="x?.imageCover" alt="" class="w-100 fit rounded">
+        </div>
+        <div>
+            <p class="categ">{{x?.category.name}}</p>
+
+            <p class="max-lines">{{x?.title}}</p>
+        </div>
+        <div>
+            <p class="fw-bold">{{x?.price}} EGP</p>
+        </div>
+        <div class="d-flex align-items-center mt-3">
+            <div class="rate d-flex justify-content-center align-items-center">
+                <p class="text-white">{{x?.ratingsAverage}}</p>
+                <i class="fa-solid fa-star fa-xs" style="color: #ffffff;"></i>
+            </div>
+            <div class="lead fs-6 ms-1 pb-1 bg-transparent">
+                <p>({{x?.ratingsQuantity}})</p>
+            </div>
+            <div class="wish ms-auto">
+                <i class="fa-solid fa-heart fa-xl mouse-pointer" style="color: #e83b3b;"></i>
+            </div>
+        </div>
+    </a>
+            </div>
+        </div>
+    </div>
+    <div class="mx-auto d-flex justify-content-center align-items-center pb-4">
+        <pagination-controls previousLabel='Prev' nextLabel="Next" (pageChange)="onTableDataChange($event)">
+        </pagination-controls>
+    </div>
+</section>

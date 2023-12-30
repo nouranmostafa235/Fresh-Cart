@@ -1,0 +1,5 @@
+.validbtn{
+    background-color: var(--main-color) !important;
+    color: white !important;
+    cursor: pointer !important;
+}

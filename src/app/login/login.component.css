@@ -1,0 +1,7 @@
+.validbtn{
+    /* background-color: var(--main-color) !important; */
+  
+    background-image: linear-gradient(to right, #499949, #409e3f, #34a333, #25a824, #0aad0a);
+    color: white !important;
+    cursor: pointer !important;
+}
